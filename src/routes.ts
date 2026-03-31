@@ -63,6 +63,8 @@ import { AddSchedule } from "./components/AddSchedule";
 import { ScheduleNewExam } from "./components/ScheduleNewExam";
 import { CreateNotice } from "./components/CreateNotice";
 import { StudentFeeReceipt } from "./components/StudentFeeReceipt";
+import { StudentView } from "./components/StudentView";
+import { Approved } from "./components/pages/Approved";
 
 export const router = createBrowserRouter([
   {
@@ -160,6 +162,14 @@ export const router = createBrowserRouter([
   {
     path: "/admin/add-student",
     Component: AddStudentForm,
+  },
+  {
+    path: "/admin/students/:studentId",
+    Component: StudentView,
+  },
+  {
+    path: "/admin/students/:applicationId/approved",
+    Component: Approved,
   },
   {
     path: "/admin/add-teacher",
